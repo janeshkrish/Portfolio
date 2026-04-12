@@ -10,7 +10,7 @@ import codingRoutes from './routes/coding.js';
 import profileRoutes from './routes/profile.js';
 import achievementRoutes from './routes/achievements.js';
 import experienceRoutes from './routes/experience.js';
-
+import contactRoutes from './routes/contact.js';
 dotenv.config();
 
 const app = express();
@@ -40,7 +40,7 @@ app.use('/coding', codingRoutes);
 app.use('/profile', profileRoutes);
 app.use('/achievements', achievementRoutes);
 app.use('/experience', experienceRoutes);
-
+app.use('/contact', contactRoutes);
 app.get('/health', (_, res) => res.json({ status: 'OK', timestamp: new Date().toISOString() }));
 
 // ── DB + Boot ───────────────────────────────────────────────────────────────

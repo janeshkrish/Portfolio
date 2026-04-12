@@ -186,4 +186,3 @@ origin: ['https://your-vercel-app.vercel.app']
 
 ---
 
-Made with ⚡ by Janesh Krishna R

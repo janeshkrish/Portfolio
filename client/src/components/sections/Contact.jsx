@@ -44,12 +44,22 @@ export default function Contact() {
       return
     }
 
-    // Normal form submission — show success (no real email API configured here)
+    // Normal form submission
     setSubmitting(true)
-    await new Promise((r) => setTimeout(r, 1200))
-    setSubmitting(false)
+    try {
+      const res = await API.post('/contact', form)
+      if (res.data.success) {
+
     toast.success('Message sent! I\'ll get back to you soon 🚀')
     setForm({ name: '', email: '', subject: '', message: '' })
+      } else {
+        toast.error(res.data.message || 'Failed to send message.')
+      }
+    } catch (error) {
+      toast.error('Failed to send message. Please try again later.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
