@@ -153,7 +153,7 @@ export default function About() {
                 { icon: <FiMapPin />, label: 'Location', value: profile?.location || 'Coimbatore, TN' },
                 { icon: <FiMail />, label: 'Email', value: profile?.email || 'janeshkrishna12@gmail.com' },
                 { icon: <FiCalendar />, label: 'Status', value: profile?.status || 'Open to Internships/SDE roles' },
-                { icon: <FiBookOpen />, label: 'Degree', value: profile?.degree || 'B.Tech IT (2nd Year)' },
+                { icon: <FiBookOpen />, label: 'Degree', value: profile?.degree || 'B.Tech IT (3rd Year)' },
               ].map((item) => (
                 <div
                   key={item.label}
