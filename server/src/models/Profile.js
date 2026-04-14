@@ -21,7 +21,7 @@ const profileSchema = new mongoose.Schema(
     cgpa: { type: String, default: '8.24' },
     internships: { type: String, default: '2+' },
     projectsCount: { type: String, default: '10+' },
-    hackathons: { type: String, default: '3W' },
+    hackathons: { type: String, default: '5' },
   },
   { timestamps: true }
 );
